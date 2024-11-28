@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Podcasty - Find and Listen Your Favorite Podcasts</title>
+    <title>My Dream Consultancy</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
         body {
             font-family: 'Arial', sans-serif;
+            background-image: url(./web.png);
+            background-repeat: no-repeat;
+            
+            
         }
 
         .navbar {
@@ -51,39 +55,6 @@
 
         .navbar-nav .nav-link:hover {
             color: #f39c12;
-        }
-
-        .navbar .btn-signup, .navbar .btn-signin {
-            padding: 0.75rem 1.5rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            transition: all 0.3s ease-in-out;
-            border: 1px solid transparent;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .navbar .btn-signup {
-            background-color: #f39c12;
-            color: #fff;
-        }
-
-        .navbar .btn-signup:hover {
-            background-color: #e67e22;
-            border-color: #e67e22;
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-            transform: translateY(-2px);
-        }
-
-        .navbar .btn-signin {
-            background-color: #e67e22;
-            color: #fff;
-        }
-
-        .navbar .btn-signin:hover {
-            background-color: #d35400;
-            border-color: #d35400;
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-            transform: translateY(-2px);
         }
 
         /* Hero Section */
@@ -194,7 +165,7 @@
     <!-- Header Section -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">Podcasty</a>
+            <a class="navbar-brand" href="#">My Dream Consultancy</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -214,8 +185,8 @@
                     </li>
                 </ul>
                 <div class="ms-3">
-                    <button class="btn btn-signup" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</button>
-                    <button class="btn btn-signin" data-bs-toggle="modal" data-bs-target="#signinModal">Sign In</button>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</button>
+                    <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#signinModal">Sign In</button>
                 </div>
             </div>
         </div>
@@ -224,8 +195,8 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
-            <h1>Find and Listen to Your Favorite Artist's Podcasts Here!</h1>
-            <p>The best podcast websites communicate a feel and make it easy for visitors to discover your podcast.</p>
+            <h1>Transforming Your Ideas into Stunning Websites!</h1>
+        <p>We design and develop websites that captivate and engage. Let us create a digital experience tailored to your business.</p>
             <div class="d-flex justify-content-center gap-4">
                 <button class="btn btn-primary">Get Started</button>
                 <button class="btn btn-outline-light">🚀 Explore Channels</button>
@@ -233,24 +204,74 @@
         </div>
     </section>
 
+    <!-- Sign Up Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="signupName" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="signupName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signupEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="signupEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signupPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="signupPassword" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sign In Modal -->
+    <div class="modal fade" id="signinModal" tabindex="-1" aria-labelledby="signinModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signinModalLabel">Sign In</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="signinEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="signinEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signinPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="signinPassword" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Sign In</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
-        
         <div class="footer-social">
-        <a href="https://www.facebook.com" target="_blank" class="social-link">
-            <i class="fab fa-facebook fa-2x"></i>
-        </a>
-        <a href="https://www.twitter.com" target="_blank" class="social-link">
-            <i class="fab fa-twitter fa-2x"></i>
-        </a>
-        <a href="https://www.instagram.com" target="_blank" class="social-link">
-            <i class="fab fa-instagram fa-2x"></i>
-        </a>
-        <a href="https://www.linkedin.com" target="_blank" class="social-link">
-            <i class="fab fa-linkedin fa-2x"></i>
-        </a>
-    </div>
-        <p>&copy; 2024 Podcasty. All rights reserved.</p>
+            <a href="https://www.facebook.com" target="_blank" class="social-link">
+                <i class="fab fa-facebook fa-2x"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" class="social-link">
+                <i class="fab fa-twitter fa-2x"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" class="social-link">
+                <i class="fab fa-instagram fa-2x"></i>
+            </a>
+        </div>
+        <p>&copy; 2024 Podcasty. All Rights Reserved.</p>
     </footer>
 
     <!-- Bootstrap JS Bundle -->
